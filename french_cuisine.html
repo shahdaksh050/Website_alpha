@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>French Cuisine</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS for the footer -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background-color: #0f172a;
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+    header {
+      background-color: #0f172a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: white;
+    }
+    .logo span {
+      color: #6366f1;
+      margin-left: 0.5rem;
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #e2e8f0;
+      font-weight: 500;
+    }
+    .hero {
+      background-image: url("photos/french.avif");
+      background-size: cover;
+      background-position: center;
+      padding: 8rem 2rem;
+      text-align: center;
+      color: white;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.25rem;
+    }
+    .section-title {
+      margin: 2rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    /* Responsive Grid Layout for Recipe Cards */
+    .dish-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 0 2rem 2rem 2rem;
+    }
+
+    .dish-card {
+      position: relative; /* Needed to position the favorite button absolutely */
+      background-color: #1e293b;
+      border-radius: 1rem;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .dish-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover; /* Maintains image aspect ratio while filling its container */
+    }
+    .dish-content {
+      padding: 1rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .dish-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .dish-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+      color: #cbd5e1;
+    }
+    .buttons {
+      display: flex;
+      gap: 1rem;
+    }
+    .btn {
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 0.5rem;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    .btn-order {
+      background-color: #6366f1;
+      color: white;
+    }
+    .btn-view {
+      background-color: transparent;
+      color: #94a3b8;
+      border: 1px solid #94a3b8;
+    }
+
+    /* Favorite (Heart) Button */
+    .fav-btn {
+      position: absolute; /* Absolute positioning inside the card */
+      top: 0.5rem;
+      right: 0.5rem;
+      width: 40px;
+      height: 40px;
+      border: none;
+      border-radius: 50%;
+      background-color: rgba(0,0,0,0.6);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.2s ease-in-out;
+    }
+    .fav-btn:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+    .fav-btn img {
+      width: 20px;
+      height: 20px;
+      filter: invert(100%);
+    }
+    /* When button is toggled, you could style it differently. Example: a red heart */
+    .fav-btn.favorited img {
+      filter: none; /* remove invert filter so it can appear in another color, or show a different icon if you prefer */
+    }
+
+    /* Custom Footer Styling */
+    .footer {
+      background-color: #0f172a;
+      color: #cbd5e1;
+      padding: 2rem 0;
+    }
+    .footer a {
+      color: #6366f1;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">🍴<span>FoodieHub</span></div>
+    <nav>
+      <a href="homepage.html">Homepage</a>
+      <a href="#">Cuisines</a>
+    </nav>
+    <div>👤</div>
+  </header>
+
+  <section class="hero">
+    <h1>French Cuisine</h1>
+    <p>Discover authentic flavors from France</p>
+  </section>
+
+  <section>
+    <h2 class="section-title">Popular Dishes</h2>
+    <div class="dish-container">
+      <!-- Card 1: Macrons -->
+      <div class="dish-card">
+        <!-- Favorite Button over the image -->
+        <button class="fav-btn" onclick="toggleFavorite(this)">
+          <img src="heart-icon.png" alt="Add to favorites">
+        </button>
+        <img 
+          src="https://www.allrecipes.com/thmb/6B1pOWWucSQqIPfe6IzxWFvKzmg=/0x512/filters:no_upscale():max_bytes(150000):strip_icc()/223232macaronsKim4x3-97e86da8c9e849218d5b70ac93bbe5f1.jpg" 
+          alt="Macrons"
+        />
+        <div class="dish-content">
+          <div>
+            <div class="dish-title">Macrons</div>
+            <div class="dish-info">
+              <span>⭐ 4.2</span>
+              <span>⏱ 35 mins</span>
+              <span>Easy</span>
+            </div>
+          </div>
+          <div class="buttons">
+            <button class="btn btn-order">Order Now</button>
+            <a href="macrons.html"><button class="btn btn-view">View Recipe</button></a>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2: Pasta & Garlic Bread -->
+      <div class="dish-card">
+        <!-- Favorite Button -->
+        <button class="fav-btn" onclick="toggleFavorite(this)">
+          <img src="heart-icon.png" alt="Add to favorites">
+        </button>
+        <img 
+          src="photos/ratatouille.jpg" 
+          alt="Pasta & Garlic Bread" 
+        />
+        <div class="dish-content">
+          <div>
+            <div class="dish-title">Ratatouille</div>
+            <div class="dish-info">
+              <span>⭐ 4.9</span>
+              <span>⏱ 60 mins</span>
+              <span>Hard</span>
+            </div>
+          </div>
+          <div class="buttons">
+            <button class="btn btn-order">Order Now</button>
+            <button class="btn btn-view">View Recipe</button>
+          </div>
+        </div>
+      </div>
+    
+      <div class="dish-card">
+        <!-- Favorite Button -->
+        <button class="fav-btn" onclick="toggleFavorite(this)">
+          <img src="heart-icon.png" alt="Add to favorites">
+        </button>
+        <img 
+          src="photos/crepes.jpg" 
+          alt="Crepes"  
+        />
+        <div class="dish-content">
+          <div>
+            <div class="dish-title">Crepes</div>
+            <div class="dish-info">
+              <span>⭐ 4.2</span>
+              <span>⏱ 35 mins</span>
+              <span>Easy</span>
+            </div>
+          </div>
+          <div class="buttons">
+            <button class="btn btn-order">Order Now</button>
+            <button class="btn btn-view">View Recipe</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="dish-card">
+        <!-- Favorite Button -->
+        <button class="fav-btn" onclick="toggleFavorite(this)">
+          <img src="heart-icon.png" alt="Add to favorites">
+        </button>
+        <img 
+          src="photos/quiche_lorraine.jpg" 
+          alt="Pasta & Garlic Bread" 
+        />
+        <div class="dish-content">
+          <div>
+            <div class="dish-title">Quiche Lorraine</div>
+            <div class="dish-info">
+              <span>⭐ 4.9</span>
+              <span>⏱ 60 mins</span>
+              <span>Hard</span>
+            </div>
+          </div>
+          <div class="buttons">
+            <button class="btn btn-order">Order Now</button>
+            <a href="quiche_lorraine.html"><button class="btn btn-view">View Recipe</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap Footer -->
+  <footer class="footer mt-auto">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+          <h5>FoodieHub</h5>
+          <p class="mb-0">&copy; 2025 FoodieHub. All rights reserved.</p>
+        </div>
+        <div class="col-md-4 text-center mb-3 mb-md-0">
+          <ul class="list-unstyled">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Our Menu</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 text-center text-md-end">
+          <ul class="list-unstyled">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (Optional, for interactive components) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Simple script to toggle favorite status -->
+  <script>
+    function toggleFavorite(button) {
+      button.classList.toggle('favorited');
+      // Here you can add logic to store data in localStorage or make a server call
+      // to keep track of the user's favorite recipes.
+    }
+  </script>
+</body>
+</html>

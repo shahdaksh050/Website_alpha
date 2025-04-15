@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Indian Cuisine</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background-color: #0f172a;
+      color: #ffffff;
+    }
+    header {
+      background-color: #0f172a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: white;
+    }
+    .logo span {
+      color: #6366f1;
+      margin-left: 0.5rem;
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #e2e8f0;
+      font-weight: 500;
+    }
+    .hero {
+      background-image: url("image.png");
+      background-size: cover;
+      background-position: center;
+      padding: 4rem 6rem;
+      text-align: center;
+      color: white;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.25rem;
+    }
+    .section-title {
+      margin: 2rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    .dish-container {
+      display: flex;
+      gap: 2rem;
+      padding: 0 2rem 2rem 2rem;
+    }
+    .dish-card {
+      background-color: #1e293b;
+      border-radius: 1rem;
+      overflow: hidden;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .dish-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .dish-content {
+      padding: 1rem;
+    }
+    .dish-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .dish-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+      color: #cbd5e1;
+    }
+    .buttons {
+      display: flex;
+      gap: 1rem;
+    }
+    .btn {
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 0.5rem;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    .btn-order {
+      background-color: #6366f1;
+      color: white;
+    }
+    .btn-view {
+      background-color: transparent;
+      color: #94a3b8;
+      border: 1px solid #94a3b8;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">🍴<span>FoodieHub</span></div>
+    <nav>
+      <a href="homepage.html">Homepage</a>
+      <a href="#">Cuisines</a>
+    </nav>
+    <div>👤</div>
+  </header>
+  <section class="hero">
+    <h1>Indian Cuisine</h1>
+    <p>Discover authentic flavors from India</p>
+  </section>
+
+  <section>
+    <h2 class="section-title">Popular Dishes</h2>
+    <div class="dish-container">
+      <div class="dish-card">
+        <img src="photos/chole_bhature.jpg" alt="Chole Bhature" />
+        <div class="dish-content">
+          <div class="dish-title">Chole Bhature</div>
+          <div class="dish-info">
+            <span>⭐ 4.8</span>
+            <span>⏱ 45 mins</span>
+            <span>Medium</span>
+          </div>
+          <div class="buttons">
+            <button class="btn btn-order">Order Now</button>
+            <a href="chole_bhature.html" class="btn btn-view">View Recipe</a>
+          </div>
+        </div>
+      </div>
+      <div class="dish-card">
+        <img src="photos/pav bhaji.jpg" alt="Pav Bhaji" />
+        <div class="dish-content">
+          <div class="dish-title">Pav Bhaji</div>
+          <div class="dish-info">
+            <span>⭐ 4.9</span>
+            <span>⏱ 60 mins</span>
+            <span>Hard</span>
+          </div>
+          <div class="buttons">
+            <button class="btn btn-order">Order Now</button>
+            <a href="pav_bhaji.html" class="btn btn-view">View Recipe</a>
+          </div>
+        </div>
+      </div>
+      <div class="dish-card">
+        <img src="photos/paneer.jpg" alt="Paneer Butter Masala & Biryani" />
+        <div class="dish-content">
+          <div class="dish-title">Paneer Butter Masala & Biryani</div>
+          <div class="dish-info">
+            <span>⭐ 4.8</span>
+            <span>⏱ 45 mins</span>
+            <span>Medium</span>
+          </div>
+          <div class="buttons">
+            <button class="btn btn-order">Order Now</button>
+            <a href="paneer.html" class="btn btn-view">View Recipe</a>
+          </div>
+        </div>
+      </div>
+      <div class="dish-card">
+        <img src="photos/dosa.jpg" alt="Dosa" />
+        <div class="dish-content">
+          <div class="dish-title">Masala Dosa</div>
+          <div class="dish-info">
+            <span>⭐ 4.8</span>
+            <span>⏱ 45 mins</span>
+            <span>Medium</span>
+          </div>
+          <div class="buttons">
+            <button class="btn btn-order">Order Now</button>
+            <a href="dosa.html" class="btn btn-view">View Recipe</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

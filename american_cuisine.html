@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>American Cuisine</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background-color: #0f172a;
+      color: #ffffff;
+    }
+    header {
+      background-color: #0f172a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: white;
+    }
+    .logo span {
+      color: #6366f1;
+      margin-left: 0.5rem;
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #e2e8f0;
+      font-weight: 500;
+    }
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092');
+      background-size: cover;
+      background-position: center;
+      padding: 4rem 2rem;
+      text-align: center;
+      color: white;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.25rem;
+    }
+    .section-title {
+      margin: 2rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    .dish-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding: 0 2rem 2rem 2rem;
+    }
+    .dish-card {
+      background-color: #1e293b;
+      border-radius: 1rem;
+      overflow: hidden;
+      flex: 1 1 calc(33% - 2rem);
+      display: flex;
+      flex-direction: column;
+      min-width: 250px;
+    }
+    .dish-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .dish-content {
+      padding: 1rem;
+    }
+    .dish-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .dish-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+      color: #cbd5e1;
+    }
+    .buttons {
+      display: flex;
+      gap: 1rem;
+    }
+    .btn {
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 0.5rem;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    .btn-order {
+      background-color: #6366f1;
+      color: white;
+    }
+    .btn-view {
+      background-color: transparent;
+      color: #94a3b8;
+      border: 1px solid #94a3b8;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">🍴<span>FoodieHub</span></div>
+    <nav>
+      <a href="#">Homepage</a>
+      <a href="#">Cuisines</a>
+    </nav>
+    <div>👤</div>
+  </header>
+
+  <section class="hero">
+    <h1>American Cuisine</h1>
+    <p>Explore delicious, hearty classics from the USA</p>
+  </section>
+
+  <section>
+    <h2 class="section-title">Popular Dishes</h2>
+    <div class="dish-container">
+      <div class="dish-card">
+        <img src="https://source.unsplash.com/800x400/?burger" alt="Cheeseburger" />
+        <div class="dish-content">
+          <div class="dish-title">Cheeseburger</div>
+          <div class="dish-info">
+            <span>⭐ 4.7</span>
+            <span>⏱ 30 mins</span>
+            <span>Easy</span>
+          </div>
+          <div class="buttons">
+            <button class="btn btn-order">Order Now</button>
+            <a href="cheeseburger.html"><button class="btn btn-view">View Recipe</button></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="dish-card">
+        <img src="https://source.unsplash.com/800x400/?mac-and-cheese" alt="Mac and Cheese" />
+        <div class="dish-content">
+          <div class="dish-title">Mac & Cheese</div>
+          <div class="dish-info">
+            <span>⭐ 4.9</span>
+            <span>⏱ 40 mins</span>
+            <span>Easy</span>
+          </div>
+          <div class="buttons">
+            <button class="btn btn-order">Order Now</button>
+            <a href="mac-and-cheese.html"><button class="btn btn-view">View Recipe</button></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="dish-card">
+        <img src="https://source.unsplash.com/800x400/?bbq-ribs" alt="BBQ Ribs" />
+        <div class="dish-content">
+          <div class="dish-title">BBQ Ribs</div>
+          <div class="dish-info">
+            <span>⭐ 4.8</span>
+            <span>⏱ 90 mins</span>
+            <span>Hard</span>
+          </div>
+          <div class="buttons">
+            <button class="btn btn-order">Order Now</button>
+            <a href="bbq-ribs.html"><button class="btn btn-view">View Recipe</button></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="dish-card">
+        <img src="https://source.unsplash.com/800x400/?pancakes" alt="Pancakes" />
+        <div class="dish-content">
+          <div class="dish-title">Pancakes</div>
+          <div class="dish-info">
+            <span>⭐ 5.0</span>
+            <span>⏱ 20 mins</span>
+            <span>Easy</span>
+          </div>
+          <div class="buttons">
+            <button class="btn btn-order">Order Now</button>
+            <a href="pancakes.html"><button class="btn btn-view">View Recipe</button></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="dish-card">
+        <img src="https://source.unsplash.com/800x400/?grilled-cheese" alt="Grilled Cheese Sandwich" />
+        <div class="dish-content">
+          <div class="dish-title">Grilled Cheese</div>
+          <div class="dish-info">
+            <span>⭐ 4.6</span>
+            <span>⏱ 10 mins</span>
+            <span>Easy</span>
+          </div>
+          <div class="buttons">
+            <button class="btn btn-order">Order Now</button>
+            <a href="grilled-cheese.html"><button class="btn btn-view">View Recipe</button></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="dish-card">
+        <img src="photos/american.jpg" alt="Vegetarian Chili" />
+        <div class="dish-content">
+          <div class="dish-title">Vegetarian Chili</div>
+          <div class="dish-info">
+            <span>⭐ 4.8</span>
+            <span>⏱ 50 mins</span>
+            <span>Medium</span>
+          </div>
+          <div class="buttons">
+            <button class="btn btn-order">Order Now</button>
+            <a href="veg-chili.html"><button class="btn btn-view">View Recipe</button></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</body>
+</html>
